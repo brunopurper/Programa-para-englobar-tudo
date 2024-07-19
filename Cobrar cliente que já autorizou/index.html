@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Retirada - Technique Eletrônica</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Aviso de Retirada - Technique Eletrônica</h1>
+        <form id="withdrawalForm">
+            <div class="form-group">
+                <label for="clientName">Nome do Cliente</label>
+                <input type="text" class="form-control capitalize" id="clientName" required>
+            </div>
+            <div class="form-group">
+                <label for="deviceModel">Modelo do Aparelho</label>
+                <input type="text" class="form-control capitalize" id="deviceModel" required>
+            </div>
+            <div class="form-group">
+                <label for="clientNumber">Número do Cliente (DD 51)</label>
+                <input type="text" class="form-control" id="clientNumber" required>
+            </div>
+            <!-- <button type="submit" class="btn btn-primary">Gerar Aviso de Retirada</button>
+            <button type="button" id="copyButton" class="btn btn-success ml-2">Copiar Texto</button> -->
+            <button type="button" id="prepareWhatsAppButton" class="btn btn-success mb-4">Preparar para WhatsApp</button>
+            <a href="/index.html" type="button" id="prepareWhatsAppButton" class="btn btn-primary mb-4">Voltar para o Menu</a>
+        </form>
+        <!-- <div class="mt-4">
+            <label for="outputText">Aviso de Retirada</label>
+            <textarea class="form-control" id="outputText" rows="10" readonly></textarea>
+        </div> -->
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Texto Copiado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    O texto do aviso de retirada foi copiado para a área de transferência.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" id="nextWithdrawal" class="btn btn-primary">Próximo Aviso</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
